@@ -8,40 +8,55 @@ const UserSchema = new Schema({
         require: true,
         min: 1,
         max: 50,
-        unique: true
-    },
-    email: {
+        unique: true,
+      },
+      email: {
         type: String,
         required: true,
         max: 50,
         unique: true,
-        lowercase: true,
-    },
-    password: {
+      },
+      password: {
         type: String,
         required: true,
         min: 6,
-    },
-    profilePicture: {
+      },
+      profilePicture: {
         type: String,
-        default: ""
-    },
-    coverPicture: {
+        default: "",
+      },
+      coverPicture: {
         type: String,
-        default: ""
-    },
-    followers: {
+        default: "",
+      },
+      followers: {
         type: Array,
-        default: []
-    },
-    followings: {
+        default: [],
+      },
+      followings: {
         type: Array,
-        default: []
-    },
-    isAdmin: {
+        default: [],
+      },
+      isAdmin: {
         type: Boolean,
-        default: false
-    },
+        default: false,
+      },
+      desc: {
+        type: String,
+        max: 50,
+      },
+      city: {
+        type: String,
+        max: 50,
+      },
+      from: {
+        type: String,
+        max: 50,
+      },
+      relationship: {
+        type: Number,
+        enum: [1, 2, 3],
+      },
 
 }, { timestamps: true });
 
